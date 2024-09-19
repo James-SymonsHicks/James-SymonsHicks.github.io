@@ -42,7 +42,7 @@
             border-radius: 10px;
             margin-right: 20px;
         }
-        .projects, .contact {
+        .projects{
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -62,5 +62,41 @@
 		    margin: 0; /* Remove any default margins */
 		    font-style: italic; /* Optional: Italicize the text */
 		}
+		
+		.contact {
+		    text-align: center;
+		}
+		
+		.contact a {
+		    color: #007BFF; /* Link color */
+		    text-decoration: none; /* Remove underline */
+		    display: inline-flex;
+		    align-items: center;
+		    margin: 10px 0;
+		}
+		
+		.contact a:hover {
+		    text-decoration: underline; /* Underline on hover */
+		}
+		
+		.contact i {
+		    margin-right: 8px; /* Space between icon and text */
+		    font-size: 1.2em; /* Adjust icon size */
+		}
+		
+		.contact .fab {
+		    color: #333; /* Icon color for Font Awesome brands */
+		}
+		
+		.contact .fas {
+		    color: #333; /* Icon color for Font Awesome solid icons */
+		}
+		
+		.contact a:hover .fab,
+		.contact a:hover .fas {
+		    color: #0056b3; /* Change icon color on hover */
+		}
+
+
 
    
