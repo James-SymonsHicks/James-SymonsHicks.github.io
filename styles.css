@@ -1,135 +1,176 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px; /* Base font size for readability */
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #2fb598;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        section {
-            margin: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .intro {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-        }
-        .intro img {
-            width: 33%;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-        .contactinfo{
-            background-color: #f0f0f0;
-			text-align: justify;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Adds padding between the content and the page edge */
+}
 
-		.projects{
-            background-color: #fff;
-			text-align: justify;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
+header {
+    background: linear-gradient(to bottom, #6cd8c0, #1e9c59);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #2fb598;
-            color: white;
-            margin-top: 20px;
-        }
-		.ResearchPaper {
-		    font-size: 0.9em; /* Adjust the size as needed */
-		    color: #666; /* Optional: Adjust the color as needed */
-		    margin: 0; /* Remove any default margins */
-		    font-style: italic; /* Optional: Italicize the text */
-		}
-		
-		.contact {
-		    text-align: center;
-		}
-		
-		.contact a {
-		    color: #007BFF; /* Link color */
-		    text-decoration: none; /* Remove underline */
-		    display: inline-flex;
-		    align-items: center;
-		    margin: 10px 0;
-		}
-		
-		.contact a:hover {
-		    text-decoration: underline; /* Underline on hover */
-		}
-		
-		.contact i {
-		    margin-right: 8px; /* Space between icon and text */
-		    font-size: 1.2em; /* Adjust icon size */
-		}
-		
-		.contact .fab {
-		    color: #333; /* Icon color for Font Awesome brands */
-		}
-		
-		.contact .fas {
-		    color: #333; /* Icon color for Font Awesome solid icons */
-		}
-		
-		.contact a:hover .fab,
-		.contact a:hover .fas {
-		    color: #0056b3; /* Change icon color on hover */
-		}
-		
-		.abstract {
-            display: none;
-            margin-top: 10px;
-        }
-        .toggle-btn {
-            cursor: pointer;
-            background-color: #2fb598;
-            color: white;
-            padding: 6px 14px;
-            border: none;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .toggle-btn:hover {
-            background-color: #0056b3;
-        }
-        .toggle-btn:focus {
-            outline: none;
-        }
+h1 {
+    margin: 0;
+    font-size: 2rem; /* Font size in rem for consistent scaling */
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.3rem; /* Keep nav links readable */
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+.intro {
+    padding: 20px;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.intro img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust base font size for small screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .intro img {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+section {
+    margin: 20px 20px 5px 20px; /* Center the section */
+    max-width: 1000px;
+    padding: 20px; /* Adds padding to sections to avoid touching edges */
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+}
+
+.projects, .contactinfo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+    color: #2fb598;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.ResearchPaper {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+.contact {
+    text-align: center; /* Centers text within flex items */
+    width: 100%; /* Full width of the page */
+    max-width: 1200px; /* Optional max width */
+    display: flex; 
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if needed */
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+    margin: 0 auto; /* Center the section itself */
+    padding: 20px; /* Optional padding */
+}
+
+.contact p, .contact a {
+    margin: 10px 0; /* Space between paragraphs */
+}
 
 
+.contact i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #2fb598;
+    transition: color 0.3s;
+}
 
-   
+.contact a:hover i {
+    color: #ffeb3b;
+}
+
+.abstract {
+    display: none;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    background-color: #2fb598;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
