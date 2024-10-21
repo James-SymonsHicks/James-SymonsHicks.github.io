@@ -131,13 +131,13 @@ h3 {
     padding: 20px; /* Optional padding */
 }
 
-.contact p, .contact a {
+.contact p, .contact a, .contact-icons p, .contact-icons a {
     margin: 10px 0; /* Space between paragraphs */
 }
 
 
-.contact i {
-    font-size: 1.5rem;
+.contact i, .contact-icons i {
+    font-size: 2rem;
     margin: 0 10px;
     color: #2fb598;
     transition: color 0.3s;
@@ -146,6 +146,19 @@ h3 {
 .contact a:hover i {
     color: #ffeb3b;
 }
+
+.contact-icons {
+    text-align: left; /* Centers text within flex items */
+    width: 100%; /* Full width of the page */
+    max-width: 1200px; /* Optional max width */
+    display: flex; 
+    align-items: left; /* Center items horizontally */
+    justify-content: left; /* Center items vertically if needed */
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+    margin: 0 auto; /* Center the section itself */
+    padding: 20px; /* Optional padding */
+}
+
 
 .abstract {
     display: none;
