@@ -1,9 +1,26 @@
+/* Defining colours: */
+:root {
+    --background-colour: #EEEEEE;
+    --text-colour: #303841;
+    --banner-colourT: #12263A;
+    --banner-colourB: #065760;
+    --banner-fontcolour: white;
+    --about-bkgcolour: #E0E1DD;
+    --project-bkgcolour: #E0E1DD;
+    --h2-colour: #065760;
+    --btn-colour: #8d162a;
+    --btn-hvrcolour: #89BCBD;
+    --icon-colour: #8d162a;
+    --link-colour: #8d162a;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color:var(--background-color);
+    color: var(--text-color);
     font-size: 16px; /* Base font size for readability */
 }
 
@@ -15,8 +32,9 @@ body {
 }
 
 header {
-    background: linear-gradient(to bottom, #6cd8c0, #1e9c59);
-    color: white;
+    background: linear-gradient(to bottom, var(--banner-colourT), var(--banner-colourB));
+    /* background-color: #257180; */
+    color: var(--banner-fontcolour);
     padding: 30px 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -24,7 +42,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2rem; /* Font size in rem for consistent scaling */
+    font-size: 3rem; /* Font size in rem for consistent scaling */
 }
 
 nav {
@@ -33,7 +51,7 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: white;
+    color: var(--banner-fontcolour);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -47,7 +65,7 @@ nav a:hover {
 .intro {
     padding: 20px;
     max-width: 100%;
-    background-color: #fff;
+    background-color: var(--about-bkgcolour);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -96,7 +114,7 @@ section {
 }
 
 .projects, .contactinfo {
-    background-color: #fff;
+    background-color: var(--project-bkgcolour);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -105,7 +123,7 @@ section {
 
 h2 {
     font-size: 1.8rem; /* Adjust heading size */
-    color: #2fb598;
+    color: var(--h2-colour);
 }
 
 h3 {
@@ -139,7 +157,7 @@ h3 {
 .contact i, .contact-icons i {
     font-size: 2rem;
     margin: 0 10px;
-    color: #2fb598;
+    color: var(--icon-colour);
     transition: color 0.3s;
 }
 
@@ -168,7 +186,7 @@ h3 {
 
 .toggle-btn {
     cursor: pointer;
-    background-color: #2fb598;
+    background-color: var(--btn-colour);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -180,10 +198,15 @@ h3 {
 }
 
 .toggle-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--btn-hvrcolour);
     transform: scale(1.05);
 }
 
 .toggle-btn:focus {
     outline: none;
+}
+
+a {
+    color: var(--link-colour);
+    
 }
