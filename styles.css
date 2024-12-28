@@ -1,212 +1,206 @@
-/* Defining colours: */
 :root {
-    --background-colour: #EEEEEE;
-    --text-colour: #303841;
-    --banner-colourT: #12263A;
-    --banner-colourB: #065760;
-    --banner-fontcolour: white;
-    --about-bkgcolour: #E0E1DD;
-    --project-bkgcolour: #E0E1DD;
-    --h2-colour: #065760;
-    --btn-colour: #8d162a;
-    --btn-hvrcolour: #89BCBD;
-    --icon-colour: #8d162a;
-    --link-colour: #8d162a;
+    --background-color: #f4f4f9;
+    --text-color: #333333;
+    --primary-color: #444444;
+    --card-bg-color: #ffffff;
+    --card-border-color: #e0e0e0;
+    --header-bg-color: #2c3e50;
+	--hyperlink-color: #2a527a;
+    --header-text-color: #ffffff;
+    --hover-color: #0056a4;
+}
+
+body, p, ul li, .research-section ul li {
+    text-align: justify;
 }
 
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color:var(--background-color);
+    background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 16px; /* Base font size for readability */
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px; /* Adds padding between the content and the page edge */
+    line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(to bottom, var(--banner-colourT), var(--banner-colourB));
-    /* background-color: #257180; */
-    color: var(--banner-fontcolour);
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
     margin: 0;
-    font-size: 3rem; /* Font size in rem for consistent scaling */
 }
 
 nav {
-    margin-top: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 nav a {
-    margin: 0 15px;
-    color: var(--banner-fontcolour);
+    color: var(--header-text-color);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    font-size: 1.3rem; /* Keep nav links readable */
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffeb3b;
+    color: var(--hover-color);
+}
+
+.pageheader {
+    text-align: center;
+    margin: 20px auto; /* Adjusts spacing */
+    font-size: 1.75rem; /* Adjust size to fit better */
+    font-weight: bold;
 }
 
 .intro {
-    padding: 20px;
-    max-width: 100%;
-    background-color: var(--about-bkgcolour);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro img {
-    width: 25%;
-    height: auto;
-    border-radius: 10px;
-    margin-right: 20px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10%;
+    margin: 10px;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Adjust base font size for small screens */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Smaller font size for smaller screens */
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    .intro {
-        flex-direction: column;
-        text-align: justify;
-    }
-
-    .intro img {
-        width: 80%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
-
-section {
-    margin: 20px 20px 5px 20px; /* Center the section */
-    max-width: 1000px;
-    padding: 20px; /* Adds padding to sections to avoid touching edges */
-    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
-}
-
-.projects, .contactinfo {
-    background-color: var(--project-bkgcolour);
+.intro div {
+    flex: 1;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
 }
 
 h2 {
-    font-size: 1.8rem; /* Adjust heading size */
-    color: var(--h2-colour);
+    font-family: 'Roboto Slab', serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
 }
 
-h3 {
-    font-size: 1.5rem;
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.ResearchPaper {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
+.left-column, .right-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact {
-    text-align: center; /* Centers text within flex items */
-    width: 100%; /* Full width of the page */
-    max-width: 1200px; /* Optional max width */
-    display: flex; 
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically if needed */
-    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
-    margin: 0 auto; /* Center the section itself */
-    padding: 20px; /* Optional padding */
-}
-
-.contact p, .contact a, .contact-icons p, .contact-icons a {
-    margin: 10px 0; /* Space between paragraphs */
-}
-
-
-.contact i, .contact-icons i {
-    font-size: 2rem;
-    margin: 0 10px;
-    color: var(--icon-colour);
-    transition: color 0.3s;
-}
-
-.contact a:hover i {
-    color: #ffeb3b;
+.contact-box {
+    background-color: var(--card-bg-color);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icons {
-    text-align: left; /* Centers text within flex items */
-    width: 100%; /* Full width of the page */
-    max-width: 1200px; /* Optional max width */
-    display: flex; 
-    align-items: left; /* Center items horizontally */
-    justify-content: left; /* Center items vertically if needed */
-    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
-    margin: 0 auto; /* Center the section itself */
-    padding: 20px; /* Optional padding */
+    display: flex;
+    justify-content: start;
+    gap: 15px;
 }
 
-
-.abstract {
-    display: none;
-    margin-top: 10px;
-    text-align: justify;
+.contact-icons a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-.toggle-btn {
-    cursor: pointer;
-    background-color: var(--btn-colour);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.contact-icons a:hover {
+    color: var(--hover-color);
 }
 
-.toggle-btn:hover {
-    background-color: var(--btn-hvrcolour);
-    transform: scale(1.05);
-}
-
-.toggle-btn:focus {
-    outline: none;
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    font-size: 0.9rem;
 }
 
 a {
-    color: var(--link-colour);
-    
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: bold;
 }
+
+a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.research-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.research-section h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.research-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.research-section ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.research-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
