@@ -79,9 +79,20 @@ nav a:hover {
 
 .intro img {
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
     border-radius: 10%;
     margin: 10px;
+}
+
+.background-banner {
+    background-image: url("Images/JSH_Banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 450px; /* Height of the banner */
+    width: 100%;
+    background-attachment: fixed;
+    z-index: -1; /* Keeps it behind other content */
+    position: relative;
 }
 
 .intro div {
