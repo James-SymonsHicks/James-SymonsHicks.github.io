@@ -164,6 +164,15 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Replace center‑alignment on the <p> with flex spacing */
+footer > p {
+  display: flex;                /* make the paragraph a flex container */
+  justify-content: space-between; /* push first child left, last child right */
+  align-items: center;          /* vertically center if it wrapped */
+  margin: 0;                     /* reset any default margins */
+  /* text-align no longer needed here */
+}
+
 a {
     color: var(--hyperlink-color);
     text-decoration: none;
