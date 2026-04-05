@@ -5,7 +5,7 @@
     --card-bg-color: #ffffff;
     --card-border-color: #e0e0e0;
     --header-bg-color: #2c3e50;
-	--hyperlink-color: #2a527a;
+    --hyperlink-color: #2a527a;
     --header-text-color: #ffffff;
     --hover-color: #0056a4;
 }
@@ -13,7 +13,6 @@
 body, p, ul li, .research-section ul li {
     text-align: justify;
 }
-
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -35,7 +34,6 @@ header {
 }
 
 header h1 {
-    
     font-family: 'Roboto Slab', serif;
     font-size: 1.65rem;
     margin: 0;
@@ -60,8 +58,8 @@ nav a:hover {
 
 .pageheader {
     text-align: center;
-    margin: 20px auto; /* Adjusts spacing */
-    font-size: 1.75rem; /* Adjust size to fit better */
+    margin: 20px auto;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
@@ -90,10 +88,10 @@ nav a:hover {
     background-image: url("Images/JSH_Banner.jpg");
     background-size: cover;
     background-position: center;
-    height: 450px; /* Height of the banner */
+    height: 450px;
     width: 100%;
     background-attachment: fixed;
-    z-index: -1; /* Keeps it behind other content */
+    z-index: -1;
     position: relative;
 }
 
@@ -164,13 +162,11 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Replace center‑alignment on the <p> with flex spacing */
 footer > p {
-  display: flex;                /* make the paragraph a flex container */
-  justify-content: space-between; /* push first child left, last child right */
-  align-items: center;          /* vertically center if it wrapped */
-  margin: 0;                     /* reset any default margins */
-  /* text-align no longer needed here */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
 }
 
 a {
@@ -184,68 +180,241 @@ a:hover {
     color: var(--hover-color);
 }
 
+/* =============================================
+   RESEARCH / PAPER CARD STYLES
+   ============================================= */
+
 .research-section {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 20px auto;
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--card-border-color);
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .research-section h2 {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--card-border-color);
     font-family: 'Roboto Slab', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
 }
 
-.research-section ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.research-section ul li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.research-section ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
+.research-section h3.ra-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.15rem;
     color: var(--primary-color);
-    font-size: 1.2rem;
+    margin: 22px 0 10px 0;
 }
 
-.toggle-btn {
-    background-color: var(--primary-color);
-    color: var(--header-text-color);
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
+.research-section h3.ra-name a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.research-section h3.ra-name a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* Paper cards */
+.paper-card {
+    background: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.paper-card.ra-card {
+    padding: 16px 22px;
+}
+
+.paper-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+.paper-meta {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.paper-meta a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.paper-meta a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* Pill-shaped resource links */
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1.5px solid var(--card-border-color);
+    background: var(--background-color);
+    color: var(--primary-color);
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
 }
 
-.toggle-btn:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05);
+.pill:hover {
+    background: var(--header-bg-color);
+    color: var(--header-text-color);
+    border-color: var(--header-bg-color);
+    text-decoration: none;
 }
+
+.pill i {
+    font-size: 0.78rem;
+}
+
+/* Abstract toggle button with rotating triangle */
+.abstract-row {
+    margin-top: 10px;
+}
+
+.abstract-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1.5px solid var(--card-border-color);
+    background: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+}
+
+.abstract-btn:hover {
+    background: var(--header-bg-color);
+    color: var(--header-text-color);
+    border-color: var(--header-bg-color);
+}
+
+.abstract-btn .arrow {
+    display: inline-block;
+    font-size: 0.65rem;
+    transition: transform 0.25s ease;
+}
+
+.abstract-btn.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* Abstract content block */
+.abstract {
+    text-align: justify;
+    margin-top: 12px;
+    padding: 14px 18px;
+    background: var(--background-color);
+    border-radius: 8px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #444;
+    border-left: 3px solid var(--header-bg-color);
+}
+
+/* Media row */
+.media-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 0.84rem;
+}
+
+.media-label {
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+}
+
+.media-row a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.media-row a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* RA items */
+.ra-item {
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.ra-item a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ra-item a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.ra-note {
+    font-size: 0.86rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center ;
+        align-items: center;
     }
 
     nav {
@@ -264,9 +433,9 @@ a:hover {
     }
 
     .background-banner {
-        background-attachment: scroll; /* Prevents fixed positioning on mobile */
-        background-size: contain; /* Ensures the entire image is visible */
+        background-attachment: scroll;
+        background-size: contain;
         width: 100%;
-        height: 200px; /* Reduce height for better visibility */
+        height: 200px;
     }
 }
