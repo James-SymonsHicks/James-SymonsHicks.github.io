@@ -23,6 +23,10 @@ body {
     line-height: 1.6;
 }
 
+/* =============================================
+   HEADER & NAV
+   ============================================= */
+
 header {
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
@@ -56,11 +60,40 @@ nav a:hover {
     color: var(--hover-color);
 }
 
-.pageheader {
-    text-align: center;
-    margin: 20px auto;
-    font-size: 1.75rem;
+/* =============================================
+   GLOBAL TYPOGRAPHY & LINKS
+   ============================================= */
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
     font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* =============================================
+   HOME PAGE — BANNER & INTRO
+   ============================================= */
+
+.background-banner {
+    background-image: url("Images/JSH_Banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 100%;
+    background-attachment: fixed;
+    z-index: -1;
+    position: relative;
 }
 
 .intro {
@@ -84,27 +117,14 @@ nav a:hover {
     margin: 10px;
 }
 
-.background-banner {
-    background-image: url("Images/JSH_Banner.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    width: 100%;
-    background-attachment: fixed;
-    z-index: -1;
-    position: relative;
-}
-
 .intro div {
     flex: 1;
     padding: 20px;
 }
 
-h2 {
-    font-family: 'Roboto Slab', serif;
-    color: var(--primary-color);
-    font-size: 1.8rem;
-}
+/* =============================================
+   HOME PAGE — TWO-COLUMN LAYOUT
+   ============================================= */
 
 .main-content {
     display: flex;
@@ -128,6 +148,69 @@ h2 {
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Home page paper cards (slightly compact) */
+.left-column .paper-card {
+    padding: 18px 22px;
+}
+
+.left-column .paper-title {
+    font-size: 1rem;
+}
+
+.left-column .paper-links {
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.left-column .pill {
+    font-size: 0.78rem;
+    padding: 4px 12px;
+}
+
+.left-column .pill i {
+    font-size: 0.72rem;
+}
+
+.left-column .media-row {
+    font-size: 0.82rem;
+    margin-top: 8px;
+}
+
+.left-column .media-label {
+    font-size: 0.7rem;
+}
+
+/* "View all research →" link */
+.view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.view-all:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+.view-all i {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.view-all:hover i {
+    transform: translateX(3px);
+}
+
+/* =============================================
+   HOME PAGE — CONTACT
+   ============================================= */
 
 .contact-box {
     background-color: var(--card-bg-color);
@@ -154,42 +237,23 @@ h2 {
     color: var(--hover-color);
 }
 
-footer {
+/* =============================================
+   RESEARCH PAGE — SECTION CONTAINER
+   ============================================= */
+
+.pageheader {
     text-align: center;
-    padding: 10px;
-    background-color: var(--header-bg-color);
-    color: var(--header-text-color);
-    font-size: 0.9rem;
-}
-
-footer > p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
-
-a {
-    color: var(--hyperlink-color);
-    text-decoration: none;
+    margin: 20px auto;
+    font-size: 1.75rem;
     font-weight: bold;
 }
-
-a:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
-}
-
-/* =============================================
-   RESEARCH / PAPER CARD STYLES
-   ============================================= */
 
 .research-section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 0 20px;
     max-width: 900px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .research-section h2 {
@@ -201,6 +265,10 @@ a:hover {
     font-size: 1.6rem;
     color: var(--primary-color);
 }
+
+/* =============================================
+   RESEARCH PAGE — RA SECTION
+   ============================================= */
 
 .research-section h3.ra-name {
     font-family: 'Roboto Slab', serif;
@@ -220,7 +288,34 @@ a:hover {
     color: var(--hover-color);
 }
 
-/* Paper cards */
+.ra-item {
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.ra-item a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ra-item a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.ra-note {
+    font-size: 0.86rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* =============================================
+   SHARED — PAPER CARDS
+   ============================================= */
+
 .paper-card {
     background: var(--card-bg-color);
     border: 1px solid var(--card-border-color);
@@ -248,6 +343,16 @@ a:hover {
     line-height: 1.4;
 }
 
+.paper-title a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+}
+
+.paper-title a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
 .paper-meta {
     font-size: 0.88rem;
     color: #666;
@@ -265,7 +370,10 @@ a:hover {
     color: var(--hover-color);
 }
 
-/* Pill-shaped resource links */
+/* =============================================
+   SHARED — PILL LINKS
+   ============================================= */
+
 .paper-links {
     display: flex;
     flex-wrap: wrap;
@@ -302,7 +410,10 @@ a:hover {
     font-size: 0.78rem;
 }
 
-/* Abstract toggle button with rotating triangle */
+/* =============================================
+   SHARED — ABSTRACT TOGGLE (ROTATING TRIANGLE)
+   ============================================= */
+
 .abstract-row {
     margin-top: 10px;
 }
@@ -354,7 +465,10 @@ a:hover {
     border-left: 3px solid var(--header-bg-color);
 }
 
-/* Media row */
+/* =============================================
+   SHARED — MEDIA ROW
+   ============================================= */
+
 .media-row {
     display: flex;
     align-items: center;
@@ -382,29 +496,23 @@ a:hover {
     color: var(--hover-color);
 }
 
-/* RA items */
-.ra-item {
-    font-size: 0.92rem;
-    margin-bottom: 8px;
-    line-height: 1.55;
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    font-size: 0.9rem;
 }
 
-.ra-item a {
-    color: var(--hyperlink-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.ra-item a:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
-}
-
-.ra-note {
-    font-size: 0.86rem;
-    color: #777;
-    font-style: italic;
-    margin-top: 4px;
+footer > p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
 }
 
 /* =============================================
