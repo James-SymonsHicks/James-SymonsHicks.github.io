@@ -9,6 +9,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ---- Inline overrides for home page preview ---- */
+
+        /* Paper cards inside the left column */
+        .left-column .paper-card {
+            background: var(--card-bg-color);
+            border: 1px solid var(--card-border-color);
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .left-column .paper-card:hover {
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .left-column .paper-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0 0 5px 0;
+            line-height: 1.4;
+        }
+
+        .left-column .paper-title a {
+            color: var(--hyperlink-color);
+            text-decoration: none;
+        }
+
+        .left-column .paper-title a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+
+        .left-column .paper-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 2px;
+        }
+
+        .left-column .paper-meta a {
+            color: var(--hyperlink-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .left-column .paper-meta a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+
+        .left-column .paper-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 10px;
+        }
+
+        .left-column .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            border: 1.5px solid var(--card-border-color);
+            background: var(--background-color);
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.4;
+        }
+
+        .left-column .pill:hover {
+            background: var(--header-bg-color);
+            color: var(--header-text-color);
+            border-color: var(--header-bg-color);
+            text-decoration: none;
+        }
+
+        .left-column .pill i {
+            font-size: 0.72rem;
+        }
+
+        .left-column .media-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 0.82rem;
+        }
+
+        .left-column .media-label {
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+
+        .left-column .media-row a {
+            color: var(--hyperlink-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .left-column .media-row a:hover {
+            text-decoration: underline;
+            color: var(--hover-color);
+        }
+
+        /* View all link */
+        .view-all {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--hyperlink-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .view-all:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .view-all i {
+            font-size: 0.75rem;
+            transition: transform 0.2s ease;
+        }
+
+        .view-all:hover i {
+            transform: translateX(3px);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -44,21 +188,50 @@
     <section class="main-content">
         <div class="left-column">
             <h2>Selected Research</h2>
-            <ul>
-				<li>
-                    <h4><a href="/Files/SymonsHicks_FinancialLiteracy_LearningByDoing.pdf">From Learning to Earning: Financial Literacy and Wealth Accumulation in the UK</a> </h4>
-                    <p class="ResearchPaper">Working Paper, January 2026.
-                </li>
-                <li>
-                    <h4><a href="/Files/Guarino_Jehiel_SymonsHicks_AlgorithmicMarketMaking_2025_July.pdf">Q-Learning and Algorithmic Market Making: Loss-free, Collusive, or Competitive Prices?</a> </h4>
-                    <p class="ResearchPaper">Working Paper, July 2025. (<i>Revise and resubmit, Review of Financial Studies</i>) <br/> 
-<i>With <a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a> and <a href="https://philippe-jehiel.enpc.fr/">Philippe Jehiel</a></i>. </p>
-                </li>
-                <li>
-                    <h4><a href="https://student-journals.ucl.ac.uk/UJE/article/1611/galley/1447/view/">The Influence of Market Dynamics on Retail Investor Attention</a></h4>
-                    <p class="ResearchPaper">UCL Journal of Economics, 2023.</p>
-                </li>
-            </ul>
+
+            <div class="paper-card">
+                <h3 class="paper-title">
+                    <a href="/Files/SymonsHicks_FinancialLiteracy_LearningByDoing.pdf">From Learning to Earning: Financial Literacy and Wealth Accumulation in the UK</a>
+                </h3>
+                <p class="paper-meta">Working Paper, January 2026</p>
+                <div class="paper-links">
+                    <a class="pill" href="/Files/SymonsHicks_FinancialLiteracy_LearningByDoing.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                    <a class="pill" href="/Files/SymonsHicks_FinancialLiteracy_LearningByDoing_Slides.pdf"><i class="fas fa-tv"></i> Slides</a>
+                </div>
+                <div class="media-row">
+                    <span class="media-label">Media</span>
+                    <a href="https://www.thetimes.com/money/saving-investing/article/the-real-reason-we-cant-shake-our-addiction-to-pitiful-savings-rates-btvjhp7cv?utm_medium=Social&utm_source=LinkedIn#Echobox=1770798596" target="_blank" rel="noopener noreferrer">The Times</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <h3 class="paper-title">
+                    <a href="/Files/Guarino_Jehiel_SymonsHicks_AlgorithmicMarketMaking_2025_July.pdf">Q-Learning and Algorithmic Market Making: Loss-free, Collusive, or Competitive Prices?</a>
+                </h3>
+                <p class="paper-meta">
+                    Working Paper, July 2025 &middot; <em>Revise and resubmit, Review of Financial Studies</em>
+                    <br>with <a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a> and <a href="https://philippe-jehiel.enpc.fr/">Philippe Jehiel</a>
+                </p>
+                <div class="paper-links">
+                    <a class="pill" href="/Files/Guarino_Jehiel_SymonsHicks_AlgorithmicMarketMaking_2025_July.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                </div>
+                <div class="media-row">
+                    <span class="media-label">Media</span>
+                    <a href="https://ucleconbrief.co.uk/2026/03/26/ai-wont-necessarily-make-financial-markets-less-competitive/" target="_blank" rel="noopener noreferrer">UCL Econ Brief</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <h3 class="paper-title">
+                    <a href="https://student-journals.ucl.ac.uk/UJE/article/1611/galley/1447/view/">The Influence of Market Dynamics on Retail Investor Attention</a>
+                </h3>
+                <p class="paper-meta"><em>UCL Journal of Economics</em>, 2023</p>
+                <div class="paper-links">
+                    <a class="pill" href="https://student-journals.ucl.ac.uk/UJE/article/1611/galley/1447/view/"><i class="fas fa-file-pdf"></i> Published Version</a>
+                </div>
+            </div>
+
+            <a class="view-all" href="Pages/research.html">View all research <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="right-column">
@@ -75,10 +248,10 @@
     </section>
 
     <footer>
-  <p>
-    <span>&copy; 2025 James Symons-Hicks. All Rights Reserved.</span>
-    <a href="https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiS1RraEN5SXFKYStFY1gxVzNNcTJUeEc1TVVwVVhKemRjQTB2c0ZUeTRpMkFpZlRPTER2d1VQVWtodnE1L1BoSTM5OTBpbmJVN2t4OGlkU1BCN3gwMTlsYXJBMFFidGwvWlJWc0piMXMxMWVMZXdxWVB1S0ZUYTdkUUpsN3pHRGw2dGZtL0pwVVNDTWp2clhvS0NOLzQ3WU4yaU4vYys3ZWVPQW90K0FPVjlHTEFtNHZPUW9ETW9wRXFFeFgiLCJzIjoiWFRjb1Q4NmxDS0xBMjBlQVJha21oUT09IiwiaSI6IkU5UW91SHFXc3JLMEVXWkgifQ==">MyFiles</a>
-  </p>
-</footer>
+        <p>
+            <span>&copy; 2026 James Symons-Hicks. All Rights Reserved.</span>
+            <a href="https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiS1RraEN5SXFKYStFY1gxVzNNcTJUeEc1TVVwVVhKemRjQTB2c0ZUeTRpMkFpZlRPTER2d1VQVWtodnE1L1BoSTM5OTBpbmJVN2t4OGlkU1BCN3gwMTlsYXJBMFFidGwvWlJWc0piMXMxMWVMZXdxWVB1S0ZUYTdkUUpsN3pHRGw2dGZtL0pwVVNDTWp2clhvS0NOLzQ3WU4yaU4vYys3ZWVPQW90K0FPVjlHTEFtNHZPUW9ETW9wRXFFeFgiLCJzIjoiWFRjb1Q4NmxDS0xBMjBlQVJha21oUT09IiwiaSI6IkU5UW91SHFXc3JLMEVXWkgifQ==">MyFiles</a>
+        </p>
+    </footer>
 </body>
 </html>
