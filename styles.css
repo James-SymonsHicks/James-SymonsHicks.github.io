@@ -190,14 +190,13 @@ nav a.active {
 }
 
 .hero-right img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     position: relative;
     z-index: 2;
-    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 /* =============================================
@@ -758,11 +757,6 @@ footer a:hover {
 
     .hero-right {
         min-height: 300px;
-    }
-
-    .hero-right img {
-        width: 200px;
-        height: 200px;
     }
 
     .contact-strip {
