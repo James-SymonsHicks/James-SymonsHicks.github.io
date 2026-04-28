@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Symons-Hicks - Research</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,168 +12,213 @@
         <h1>James Symons-Hicks</h1>
         <nav>
             <a href="../index.html">Home</a>
-            <a href="research.html">Research</a>
+            <a href="research.html" class="active">Research</a>
             <a href="../Files/JamesSymonsHicks_UpdatedCV.pdf">CV</a>
         </nav>
     </header>
 
-    <div class="pageheader">
-        <h1>Research</h1>
+    <div class="page-hero">
+        <div class="page-title">Research</div>
     </div>
 
-    <!-- ==================== PUBLICATIONS ==================== -->
-    <section class="research-section">
-        <h2>Publications</h2>
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterClick(this)">All</button>
+        <button class="filter-btn" onclick="filterClick(this)">Papers</button>
+        <button class="filter-btn" onclick="filterClick(this)">Research Assistance</button>
+    </div>
 
-        <div class="paper-card">
-            <h3 class="paper-title">The Influence of Market Dynamics on Retail Investor Attention</h3>
-            <p class="paper-meta"><em>UCL Journal of Economics</em>, 2023, 2(1), 36–64</p>
-            <div class="paper-links">
-                <a class="pill" href="https://student-journals.ucl.ac.uk/UJE/article/1611/galley/1447/view/"><i class="fas fa-file-pdf"></i> Published Version</a>
-                <a class="pill" href="../Files/SymonsHicks_Retail_Investors_Dynamics_Attention_Revision.pdf"><i class="fas fa-file-pdf"></i> Submitted Version</a>
-                <a class="pill" href="https://github.com/James-SymonsHicks/Market-Dynamics-Attention"><i class="fas fa-code"></i> Code</a>
-            </div>
-            <div class="abstract-row">
-                <button class="abstract-btn" onclick="toggleAbstract(this)">
-                    <span class="arrow">&#9654;</span> Abstract
-                </button>
-            </div>
-            <div class="abstract" style="display:none;">
-                Retail investors have become increasingly active in global markets over the past several years. However, the factors that drive retail investors to focus on particular stocks are unclear. Using a sample of UK FTSE 100 stocks, this paper analyses whether stock volatility, liquidity, returns, and trading volume have the power to attract the attention of UK retail investors, measured using the Google Search Volume Index. Overall, this paper finds positive relationships between three of the dynamics (volatility, returns, and daily trading volume) and increased retail investor attention. Greater stock illiquidity also coincides with an increase in the Google Search Volume Index, although this may be due to liquidity-impacting events. When conditioning on stocks by quartiles of market capitalisation, I find that the effects of returns and trading volume are greater in magnitude for the top 25% of stocks.
-            </div>
+    <div class="timeline">
+
+        <!-- ==================== PUBLICATIONS ==================== -->
+        <div class="sec-divider">
+            <span class="sec-label">Publications</span>
+            <span class="sec-line"></span>
         </div>
-    </section>
 
-    <!-- ==================== WORKING PAPERS ==================== -->
-    <section class="research-section">
-        <h2>Working Papers</h2>
-
-        <div class="paper-card">
-            <h3 class="paper-title">From Learning to Earning: Financial Literacy and Wealth Accumulation in the UK</h3>
-            <p class="paper-meta">Working Paper, January 2026</p>
-            <div class="paper-links">
-                <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
-                <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing_Abridged.pdf"><i class="fas fa-file-pdf"></i> Abridged Version</a>
-                <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing_Slides.pdf"><i class="fas fa-tv"></i> Slides</a>
-            </div>
-            <div class="media-row">
-                <span class="media-label">Media</span>
-                <a href="https://www.thetimes.com/money/saving-investing/article/the-real-reason-we-cant-shake-our-addiction-to-pitiful-savings-rates-btvjhp7cv?utm_medium=Social&utm_source=LinkedIn#Echobox=1770798596" target="_blank" rel="noopener noreferrer">The Times</a>
-            </div>
-            <div class="abstract-row">
-                <button class="abstract-btn" onclick="toggleAbstract(this)">
-                    <span class="arrow">&#9654;</span> Abstract
-                </button>
-            </div>
-            <div class="abstract" style="display:none;">
-                Only 22% of UK households hold stocks. Even among those with substantial savings, many keep the majority of their wealth in low-yield cash accounts. This paper argues that financial-literacy frictions, not only monetary participation costs, are central to understanding who participates in equity markets and how they allocate wealth. Using the FCA Financial Lives Survey, we show that, conditional on wealth, stock-market participation is strongly increasing in financial literacy, while the share of the portfolio held in cash falls with literacy. We also document that large, early-life literacy differences across gender and education narrow with the amount invested in non-cash assets, consistent with learning-by-doing. We develop a calibrated life-cycle model in which literacy is a non-monetary participation friction that accumulates endogenously through stock-market experience. The model reproduces the imperfect wealth–participation correlation observed in the data, with some high-literacy, low-wealth households entering and some high-wealth, low-literacy households remaining out. Counterfactual policy exercises show that early-life literacy interventions and stock (rather than cash) transfers can raise long-term participation, literacy, and retirement consumption, enhancing resilience to income shocks while increasing exposure to financial shocks.
+        <div class="paper-row">
+            <div class="paper-year">2023</div>
+            <div class="paper-body">
+                <div class="paper-name">The Influence of Market Dynamics on Retail Investor Attention</div>
+                <div class="paper-info"><em>UCL Journal of Economics</em>, 2023, 2(1), 36–64</div>
+                <div class="paper-badges">
+                    <a class="pill" href="https://student-journals.ucl.ac.uk/UJE/article/1611/galley/1447/view/"><i class="fas fa-file-pdf"></i> Published</a>
+                    <a class="pill" href="../Files/SymonsHicks_Retail_Investors_Dynamics_Attention_Revision.pdf"><i class="fas fa-file-pdf"></i> Submitted</a>
+                    <a class="pill" href="https://github.com/James-SymonsHicks/Market-Dynamics-Attention"><i class="fas fa-code"></i> Code</a>
+                    <button class="abstract-btn" onclick="toggleAbstract(this)">
+                        <span class="arrow">&#9654;</span> Abstract
+                    </button>
+                </div>
+                <div class="abstract" style="display:none;">
+                    Retail investors have become increasingly active in global markets over the past several years. However, the factors that drive retail investors to focus on particular stocks are unclear. Using a sample of UK FTSE 100 stocks, this paper analyses whether stock volatility, liquidity, returns, and trading volume have the power to attract the attention of UK retail investors, measured using the Google Search Volume Index. Overall, this paper finds positive relationships between three of the dynamics (volatility, returns, and daily trading volume) and increased retail investor attention. Greater stock illiquidity also coincides with an increase in the Google Search Volume Index, although this may be due to liquidity-impacting events. When conditioning on stocks by quartiles of market capitalisation, I find that the effects of returns and trading volume are greater in magnitude for the top 25% of stocks.
+                </div>
             </div>
         </div>
 
-        <div class="paper-card">
-            <h3 class="paper-title">Q-Learning and Algorithmic Market Making: Loss-free, Collusive, or Competitive Prices?</h3>
-            <p class="paper-meta">
-                with <a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a> and <a href="https://philippe-jehiel.enpc.fr/">Philippe Jehiel</a>
-                <br>Working Paper, July 2025
-                <br><em>Revise and resubmit, Review of Financial Studies</em>
-            </p>
-            <div class="paper-links">
-                <a class="pill" href="../Files/Guarino_Jehiel_SymonsHicks_AlgorithmicMarketMaking_2025_July.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
-            </div>
-            <div class="media-row">
-                <span class="media-label">Media</span>
-                <a href="https://ucleconbrief.co.uk/2026/03/26/ai-wont-necessarily-make-financial-markets-less-competitive/" target="_blank" rel="noopener noreferrer">UCL Econ Brief</a>
-            </div>
-            <div class="abstract-row">
-                <button class="abstract-btn" onclick="toggleAbstract(this)">
-                    <span class="arrow">&#9654;</span> Abstract
-                </button>
-            </div>
-            <div class="abstract" style="display:none;">
-                We study whether Algorithmic Market Makers using Q-learning produce competitive or supra-competitive prices in a quote-driven asset market. We show, through simulations and analytically, that the result depends on the way the algorithm is set up. A basic Q-learning algorithm leads to loss-free prices and is, therefore, not fit for trade. Carefully choosing the exploration and learning parameters leads to less extreme prices, but still far away from the competitive ones. When we endow the algorithm with a basic understanding of the market and basic information about outstanding quotes, the Q-learning algorithms produce competitive prices.
+        <!-- ==================== WORKING PAPERS ==================== -->
+        <div class="sec-divider">
+            <span class="sec-label">Working Papers</span>
+            <span class="sec-line"></span>
+        </div>
+
+        <div class="paper-row">
+            <div class="paper-year">2026</div>
+            <div class="paper-body">
+                <div class="paper-name">From Learning to Earning: Financial Literacy and Wealth Accumulation in the UK</div>
+                <div class="paper-info">Working Paper, January 2026</div>
+                <div class="paper-badges">
+                    <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                    <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing_Abridged.pdf"><i class="fas fa-file-pdf"></i> Abridged</a>
+                    <a class="pill" href="../Files/SymonsHicks_FinancialLiteracy_LearningByDoing_Slides.pdf"><i class="fas fa-tv"></i> Slides</a>
+                    <a class="pill media-pill" href="https://www.thetimes.com/money/saving-investing/article/the-real-reason-we-cant-shake-our-addiction-to-pitiful-savings-rates-btvjhp7cv?utm_medium=Social&utm_source=LinkedIn#Echobox=1770798596" target="_blank" rel="noopener noreferrer"><i class="fas fa-newspaper"></i> The Times</a>
+                    <button class="abstract-btn" onclick="toggleAbstract(this)">
+                        <span class="arrow">&#9654;</span> Abstract
+                    </button>
+                </div>
+                <div class="abstract" style="display:none;">
+                    Only 22% of UK households hold stocks. Even among those with substantial savings, many keep the majority of their wealth in low-yield cash accounts. This paper argues that financial-literacy frictions, not only monetary participation costs, are central to understanding who participates in equity markets and how they allocate wealth. Using the FCA Financial Lives Survey, we show that, conditional on wealth, stock-market participation is strongly increasing in financial literacy, while the share of the portfolio held in cash falls with literacy. We also document that large, early-life literacy differences across gender and education narrow with the amount invested in non-cash assets, consistent with learning-by-doing. We develop a calibrated life-cycle model in which literacy is a non-monetary participation friction that accumulates endogenously through stock-market experience. The model reproduces the imperfect wealth–participation correlation observed in the data, with some high-literacy, low-wealth households entering and some high-wealth, low-literacy households remaining out. Counterfactual policy exercises show that early-life literacy interventions and stock (rather than cash) transfers can raise long-term participation, literacy, and retirement consumption, enhancing resilience to income shocks while increasing exposure to financial shocks.
+                </div>
             </div>
         </div>
 
-        <div class="paper-card">
-            <h3 class="paper-title">Unravelling the Influence of Retail Investors on Liquidity and Volatility in UK Markets</h3>
-            <p class="paper-meta">UCL BSc Economics Dissertation</p>
-            <div class="paper-links">
-                <a class="pill" href="../Files/SymonsHicks_UKRetailInvestors_LiquidityVolatility_workingpaper.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
-            </div>
-            <div class="abstract-row">
-                <button class="abstract-btn" onclick="toggleAbstract(this)">
-                    <span class="arrow">&#9654;</span> Abstract
-                </button>
-            </div>
-            <div class="abstract" style="display:none;">
-                Retail investor presence has been growing in UK markets over the past decade and does not seem likely to fade anytime soon. With the changes in the investing landscape and the boom in investors during the pandemic, it seems necessary to re-evaluate their impact on UK markets. This paper analyses the impact of retail investors on liquidity and volatility using pricing data on the UK FTSE 100 index, website traffic analysis to trading platforms, and the Google Search Volume Index. Overall, I find that retail investing activity contributes to increased stock volatility, particularly for stocks that are more well-known, such as consumer staples and consumer discretionary; they have a positive, but lower than average, impact on financial stocks. I find that these investors had an increased impact on volatility during the pandemic, with this effect remaining in place post-COVID. There is some evidence to suggest that increased investor attention increases liquidity the following week.
+        <div class="paper-row">
+            <div class="paper-year">2025</div>
+            <div class="paper-body">
+                <div class="paper-name">Q-Learning and Algorithmic Market Making: Loss-free, Collusive, or Competitive Prices?</div>
+                <div class="paper-info">
+                    with <a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a> and <a href="https://philippe-jehiel.enpc.fr/">Philippe Jehiel</a>
+                    <br>Working Paper, July 2025
+                    <br><em>Revise and resubmit, Review of Financial Studies</em>
+                </div>
+                <div class="paper-badges">
+                    <a class="pill" href="../Files/Guarino_Jehiel_SymonsHicks_AlgorithmicMarketMaking_2025_July.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                    <a class="pill media-pill" href="https://ucleconbrief.co.uk/2026/03/26/ai-wont-necessarily-make-financial-markets-less-competitive/" target="_blank" rel="noopener noreferrer"><i class="fas fa-newspaper"></i> UCL Econ Brief</a>
+                    <button class="abstract-btn" onclick="toggleAbstract(this)">
+                        <span class="arrow">&#9654;</span> Abstract
+                    </button>
+                </div>
+                <div class="abstract" style="display:none;">
+                    We study whether Algorithmic Market Makers using Q-learning produce competitive or supra-competitive prices in a quote-driven asset market. We show, through simulations and analytically, that the result depends on the way the algorithm is set up. A basic Q-learning algorithm leads to loss-free prices and is, therefore, not fit for trade. Carefully choosing the exploration and learning parameters leads to less extreme prices, but still far away from the competitive ones. When we endow the algorithm with a basic understanding of the market and basic information about outstanding quotes, the Q-learning algorithms produce competitive prices.
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- ==================== WORKS IN PROGRESS ==================== -->
-    <section class="research-section">
-        <h2>Works in Progress</h2>
-
-        <div class="paper-card">
-            <h3 class="paper-title">Pension Reform and the Distribution of Demand: Consumption, Saving, and Capital Allocation under DB and DC Systems</h3>
-            <p class="paper-meta">with <a href="https://sites.google.com/view/nicholas-tokay/home">Nicholas Tokay</a></p>
+        <div class="paper-row">
+            <div class="paper-year">2023</div>
+            <div class="paper-body">
+                <div class="paper-name">Unravelling the Influence of Retail Investors on Liquidity and Volatility in UK Markets</div>
+                <div class="paper-info">UCL BSc Economics Dissertation</div>
+                <div class="paper-badges">
+                    <a class="pill" href="../Files/SymonsHicks_UKRetailInvestors_LiquidityVolatility_workingpaper.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                    <button class="abstract-btn" onclick="toggleAbstract(this)">
+                        <span class="arrow">&#9654;</span> Abstract
+                    </button>
+                </div>
+                <div class="abstract" style="display:none;">
+                    Retail investor presence has been growing in UK markets over the past decade and does not seem likely to fade anytime soon. With the changes in the investing landscape and the boom in investors during the pandemic, it seems necessary to re-evaluate their impact on UK markets. This paper analyses the impact of retail investors on liquidity and volatility using pricing data on the UK FTSE 100 index, website traffic analysis to trading platforms, and the Google Search Volume Index. Overall, I find that retail investing activity contributes to increased stock volatility, particularly for stocks that are more well-known, such as consumer staples and consumer discretionary; they have a positive, but lower than average, impact on financial stocks. I find that these investors had an increased impact on volatility during the pandemic, with this effect remaining in place post-COVID. There is some evidence to suggest that increased investor attention increases liquidity the following week.
+                </div>
+            </div>
         </div>
-    </section>
 
-    <!-- ==================== RESEARCH ASSISTANCE ==================== -->
-    <section class="research-section">
-        <h2>Research Assistance</h2>
-        <p style="font-size:0.9rem; color:#666; margin-bottom: 18px;">Ordered starting with most recent.</p>
+        <!-- ==================== WORKS IN PROGRESS ==================== -->
+        <div class="sec-divider">
+            <span class="sec-label">Works In Progress</span>
+            <span class="sec-line"></span>
+        </div>
 
-        <h3 class="ra-name"><a href="https://mdoepke.github.io/index.html">Matthias Doepke</a></h3>
-        <div class="paper-card ra-card">
+        <div class="paper-row">
+            <div class="paper-year" style="color: var(--rule);">&mdash;</div>
+            <div class="paper-body">
+                <div class="paper-name">Pension Reform and the Distribution of Demand: Consumption, Saving, and Capital Allocation under DB and DC Systems</div>
+                <div class="paper-info">with <a href="https://sites.google.com/view/nicholas-tokay/home">Nicholas Tokay</a></div>
+            </div>
+        </div>
+
+        <!-- ==================== RESEARCH ASSISTANCE ==================== -->
+        <div class="sec-divider">
+            <span class="sec-label">Research Assistance</span>
+            <span class="sec-line"></span>
+        </div>
+
+        <p class="ra-sub-note">Ordered starting with most recent.</p>
+
+        <div class="ra-prof">
+            <div class="ra-init">MD</div>
+            <div class="ra-name"><a href="https://mdoepke.github.io/index.html">Matthias Doepke</a></div>
+        </div>
+        <div class="ra-card">
             <p class="ra-item">Agostinelli, F., <b>Doepke, M.</b>, Sorrenti, G. and Zilibotti, F., 2025. A Stairway to Success: How Parenting Shapes Culture and Social Stratification (No. w33963). National Bureau of Economic Research.</p>
-            <div class="paper-links"><a class="pill" href="https://www.nber.org/papers/w33963"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.nber.org/papers/w33963"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-note">Other working papers related to family macroeconomics.</p>
         </div>
 
-        <h3 class="ra-name"><a href="https://www.ilzetzki.com/">Ethan Ilzetzki</a></h3>
-        <div class="paper-card ra-card">
+        <div class="ra-prof">
+            <div class="ra-init">EI</div>
+            <div class="ra-name"><a href="https://www.ilzetzki.com/">Ethan Ilzetzki</a></div>
+        </div>
+        <div class="ra-card">
             <p class="ra-item"><b>Ilzetzki, E.</b>, 2025. Guns and growth: The economic consequences of defense buildups (No. 2). Kiel Report.</p>
-            <div class="paper-links"><a class="pill" href="https://www.econstor.eu/handle/10419/311212"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.econstor.eu/handle/10419/311212"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-item"><b>Ilzetzki, E.</b> and Simonelli, S., 2025. Measuring productivity dispersion: Lessons from counting one-hundred million ballots.</p>
-            <div class="paper-links"><a class="pill" href="https://www.ilzetzki.com/_files/ugd/b3763a_7eed56dc646043d0967e7806a1205456.pdf"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.ilzetzki.com/_files/ugd/b3763a_7eed56dc646043d0967e7806a1205456.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-note">Other working papers related to fiscal policy, productivity, and growth.</p>
         </div>
 
-        <h3 class="ra-name"><a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a></h3>
-        <div class="paper-card ra-card">
+        <div class="ra-prof">
+            <div class="ra-init">AG</div>
+            <div class="ra-name"><a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a></div>
+        </div>
+        <div class="ra-card">
             <p class="ra-item">Cavatorta, E., <b>Guarino, A.</b> and Huck, S., 2024. Social Learning with Partial and Aggregate Information: Experimental Evidence. <em>Games and Economic Behavior</em>.</p>
-            <div class="paper-links"><a class="pill" href="https://www.sciencedirect.com/science/article/pii/S0899825624000733?casa_token=67j0BgvBm5QAAAAA:4whvR2aUIzMyifbqV5scJRB1jMpEmCqle5pPiedrKfAZuRNnW0nTY3lErevTxVMqIkH2X0G_KQ"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.sciencedirect.com/science/article/pii/S0899825624000733?casa_token=67j0BgvBm5QAAAAA:4whvR2aUIzMyifbqV5scJRB1jMpEmCqle5pPiedrKfAZuRNnW0nTY3lErevTxVMqIkH2X0G_KQ"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-item">Angrisani, M., Cipriani, M., <b>Guarino, A.</b>, Kendall, R. and Zarate-Pina, J., 2024. Non-Cognitive Skills at the Time of COVID-19: An Experiment with Professional Traders and Students. <em>The Quarterly Journal of Finance</em>.</p>
-            <div class="paper-links"><a class="pill" href="https://www.worldscientific.com/doi/abs/10.1142/S2010139224400032"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.worldscientific.com/doi/abs/10.1142/S2010139224400032"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-item">Angrisani, M., Cipriani, M., <b>Guarino, A.</b>, Kendall, R. and Ortiz de Zarate, J., 2023. Risk preferences at the Time of COVID-19: An Experiment with Professional Traders and Students. FRB of New York Staff Report, (927).</p>
-            <div class="paper-links"><a class="pill" href="https://www.dropbox.com/scl/fi/4dj8e3qc72f7ymvt71uju/Risk_Aversion_during_the_COVID_Pandemic_Dec2023.pdf?rlkey=ptztnakmt52rd7smwn9p4sv1k&e=1&dl=0"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.dropbox.com/scl/fi/4dj8e3qc72f7ymvt71uju/Risk_Aversion_during_the_COVID_Pandemic_Dec2023.pdf?rlkey=ptztnakmt52rd7smwn9p4sv1k&e=1&dl=0"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-item">Angrisani, M., Cipriani, M. and <b>Guarino, A.</b>, 2022. Strategic Sophistication and Trading Profits: An Experiment with Professional Traders and Students. FRB of New York Staff Report, 1044.</p>
-            <div class="paper-links"><a class="pill" href="https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1044.pdf"><i class="fas fa-file-pdf"></i> Paper</a></div>
+            <div class="ra-links">
+                <a class="pill" href="https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1044.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+            </div>
             <p class="ra-note">Other working papers related to strategic sophistication, trading, and experimental economics.</p>
         </div>
-    </section>
+
+    </div>
 
     <footer>
-        <p>
-            <span>&copy; 2026 James Symons-Hicks. All Rights Reserved.</span>
-            <a href="https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiS1RraEN5SXFKYStFY1gxVzNNcTJUeEc1TVVwVVhKemRjQTB2c0ZUeTRpMkFpZlRPTER2d1VQVWtodnE1L1BoSTM5OTBpbmJVN2t4OGlkU1BCN3gwMTlsYXJBMFFidGwvWlJWc0piMXMxMWVMZXdxWVB1S0ZUYTdkUUpsN3pHRGw2dGZtL0pwVVNDTWp2clhvS0NOLzQ3WU4yaU4vYys3ZWVPQW90K0FPVjlHTEFtNHZPUW9ETW9wRXFFeFgiLCJzIjoiWFRjb1Q4NmxDS0xBMjBlQVJha21oUT09IiwiaSI6IkU5UW91SHFXc3JLMEVXWkgifQ==">MyFiles</a>
-        </p>
+        <span>&copy; 2026 James Symons-Hicks. All Rights Reserved.</span>
+        <a href="https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiS1RraEN5SXFKYStFY1gxVzNNcTJUeEc1TVVwVVhKemRjQTB2c0ZUeTRpMkFpZlRPTER2d1VQVWtodnE1L1BoSTM5OTBpbmJVN2t4OGlkU1BCN3gwMTlsYXJBMFFidGwvWlJWc0piMXMxMWVMZXdxWVB1S0ZUYTdkUUpsN3pHRGw2dGZtL0pwVVNDTWp2clhvS0NOLzQ3WU4yaU4vYys3ZWVPQW90K0FPVjlHTEFtNHZPUW9ETW9wRXFFeFgiLCJzIjoiWFRjb1Q4NmxDS0xBMjBlQVJha21oUT09IiwiaSI6IkU5UW91SHFXc3JLMEVXWkgifQ==">MyFiles</a>
     </footer>
 
     <script>
         function toggleAbstract(btn) {
-            const card = btn.closest('.paper-card');
-            const abstract = card.querySelector('.abstract');
-            if (abstract.style.display === 'none') {
-                abstract.style.display = 'block';
-                btn.classList.add('open');
-            } else {
-                abstract.style.display = 'none';
-                btn.classList.remove('open');
+            const abstract = btn.closest('.paper-badges').nextElementSibling;
+            if (abstract && abstract.classList.contains('abstract')) {
+                if (abstract.style.display === 'none') {
+                    abstract.style.display = 'block';
+                    btn.classList.add('open');
+                } else {
+                    abstract.style.display = 'none';
+                    btn.classList.remove('open');
+                }
             }
+        }
+
+        function filterClick(btn) {
+            btn.parentElement.querySelectorAll('.filter-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
         }
     </script>
 </body>
