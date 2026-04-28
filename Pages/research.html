@@ -22,20 +22,20 @@
     </div>
 
     <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterClick(this)">All</button>
-        <button class="filter-btn" onclick="filterClick(this)">Papers</button>
-        <button class="filter-btn" onclick="filterClick(this)">Research Assistance</button>
+        <button class="filter-btn active" data-show="all">All</button>
+        <button class="filter-btn" data-show="papers">Papers</button>
+        <button class="filter-btn" data-show="ra">Research Assistance</button>
     </div>
 
     <div class="timeline">
 
         <!-- ==================== PUBLICATIONS ==================== -->
-        <div class="sec-divider">
+        <div class="sec-divider" data-group="papers">
             <span class="sec-label">Publications</span>
             <span class="sec-line"></span>
         </div>
 
-        <div class="paper-row">
+        <div class="paper-row" data-group="papers">
             <div class="paper-year">2023</div>
             <div class="paper-body">
                 <div class="paper-name">The Influence of Market Dynamics on Retail Investor Attention</div>
@@ -55,12 +55,12 @@
         </div>
 
         <!-- ==================== WORKING PAPERS ==================== -->
-        <div class="sec-divider">
+        <div class="sec-divider" data-group="papers">
             <span class="sec-label">Working Papers</span>
             <span class="sec-line"></span>
         </div>
 
-        <div class="paper-row">
+        <div class="paper-row" data-group="papers">
             <div class="paper-year">2026</div>
             <div class="paper-body">
                 <div class="paper-name">From Learning to Earning: Financial Literacy and Wealth Accumulation in the UK</div>
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="paper-row">
+        <div class="paper-row" data-group="papers">
             <div class="paper-year">2025</div>
             <div class="paper-body">
                 <div class="paper-name">Q-Learning and Algorithmic Market Making: Loss-free, Collusive, or Competitive Prices?</div>
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <div class="paper-row">
+        <div class="paper-row" data-group="papers">
             <div class="paper-year">2023</div>
             <div class="paper-body">
                 <div class="paper-name">Unravelling the Influence of Retail Investors on Liquidity and Volatility in UK Markets</div>
@@ -120,12 +120,12 @@
         </div>
 
         <!-- ==================== WORKS IN PROGRESS ==================== -->
-        <div class="sec-divider">
+        <div class="sec-divider" data-group="papers">
             <span class="sec-label">Works In Progress</span>
             <span class="sec-line"></span>
         </div>
 
-        <div class="paper-row">
+        <div class="paper-row" data-group="papers">
             <div class="paper-year" style="color: var(--rule);">&mdash;</div>
             <div class="paper-body">
                 <div class="paper-name">Pension Reform and the Distribution of Demand: Consumption, Saving, and Capital Allocation under DB and DC Systems</div>
@@ -134,18 +134,18 @@
         </div>
 
         <!-- ==================== RESEARCH ASSISTANCE ==================== -->
-        <div class="sec-divider">
+        <div class="sec-divider" data-group="ra">
             <span class="sec-label">Research Assistance</span>
             <span class="sec-line"></span>
         </div>
 
-        <p class="ra-sub-note">Ordered starting with most recent.</p>
+        <p class="ra-sub-note" data-group="ra">Ordered starting with most recent.</p>
 
-        <div class="ra-prof">
+        <div class="ra-prof" data-group="ra">
             <div class="ra-init">MD</div>
             <div class="ra-name"><a href="https://mdoepke.github.io/index.html">Matthias Doepke</a></div>
         </div>
-        <div class="ra-card">
+        <div class="ra-card" data-group="ra">
             <p class="ra-item">Agostinelli, F., <b>Doepke, M.</b>, Sorrenti, G. and Zilibotti, F., 2025. A Stairway to Success: How Parenting Shapes Culture and Social Stratification (No. w33963). National Bureau of Economic Research.</p>
             <div class="ra-links">
                 <a class="pill" href="https://www.nber.org/papers/w33963"><i class="fas fa-file-pdf"></i> Paper</a>
@@ -153,11 +153,11 @@
             <p class="ra-note">Other working papers related to family macroeconomics.</p>
         </div>
 
-        <div class="ra-prof">
+        <div class="ra-prof" data-group="ra">
             <div class="ra-init">EI</div>
             <div class="ra-name"><a href="https://www.ilzetzki.com/">Ethan Ilzetzki</a></div>
         </div>
-        <div class="ra-card">
+        <div class="ra-card" data-group="ra">
             <p class="ra-item"><b>Ilzetzki, E.</b>, 2025. Guns and growth: The economic consequences of defense buildups (No. 2). Kiel Report.</p>
             <div class="ra-links">
                 <a class="pill" href="https://www.econstor.eu/handle/10419/311212"><i class="fas fa-file-pdf"></i> Paper</a>
@@ -169,11 +169,11 @@
             <p class="ra-note">Other working papers related to fiscal policy, productivity, and growth.</p>
         </div>
 
-        <div class="ra-prof">
+        <div class="ra-prof" data-group="ra">
             <div class="ra-init">AG</div>
             <div class="ra-name"><a href="https://sites.google.com/view/antonio-guarino">Antonio Guarino</a></div>
         </div>
-        <div class="ra-card">
+        <div class="ra-card" data-group="ra">
             <p class="ra-item">Cavatorta, E., <b>Guarino, A.</b> and Huck, S., 2024. Social Learning with Partial and Aggregate Information: Experimental Evidence. <em>Games and Economic Behavior</em>.</p>
             <div class="ra-links">
                 <a class="pill" href="https://www.sciencedirect.com/science/article/pii/S0899825624000733?casa_token=67j0BgvBm5QAAAAA:4whvR2aUIzMyifbqV5scJRB1jMpEmCqle5pPiedrKfAZuRNnW0nTY3lErevTxVMqIkH2X0G_KQ"><i class="fas fa-file-pdf"></i> Paper</a>
@@ -214,12 +214,25 @@
             }
         }
 
-        function filterClick(btn) {
-            btn.parentElement.querySelectorAll('.filter-btn').forEach(function(b) {
-                b.classList.remove('active');
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                btn.classList.add('active');
+
+                var show = btn.getAttribute('data-show');
+                document.querySelectorAll('[data-group]').forEach(function(el) {
+                    if (show === 'all') {
+                        el.style.display = '';
+                    } else if (el.getAttribute('data-group') === show) {
+                        el.style.display = '';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
             });
-            btn.classList.add('active');
-        }
+        });
     </script>
 </body>
 </html>
