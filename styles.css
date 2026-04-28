@@ -163,8 +163,8 @@ nav a.active {
 }
 
 .hero-photo-bridge img {
-    width: 130px;
-    height: 130px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
