@@ -312,6 +312,15 @@ nav a.active {
     padding-top: 5px;
 }
 
+.paper-row:has(+ .paper-row.paper-cont) {
+    border-bottom: none;
+    padding-bottom: 4px;
+}
+
+.paper-row.paper-cont {
+    padding-top: 4px;
+}
+
 .paper-body {
     min-width: 0;
 }
@@ -344,6 +353,12 @@ nav a.active {
 
 .paper-info a:hover {
     text-decoration: underline;
+}
+
+.paper-status {
+    color: var(--ink);
+    font-style: italic;
+    font-weight: 500;
 }
 
 .paper-badges {
