@@ -314,11 +314,16 @@ nav a.active {
 
 .paper-row:has(+ .paper-row.paper-cont) {
     border-bottom: none;
-    padding-bottom: 4px;
+    padding-bottom: 14px;
 }
 
 .paper-row.paper-cont {
-    padding-top: 4px;
+    padding-top: 0;
+}
+
+.paper-row.paper-cont .paper-body {
+    border-top: 1px dashed var(--rule);
+    padding-top: 18px;
 }
 
 .paper-body {
